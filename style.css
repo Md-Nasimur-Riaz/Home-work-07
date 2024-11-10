@@ -1,0 +1,99 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+nav .row{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    background: #2c3e50;
+
+}
+nav .container{
+    width: 1200px;
+    margin: auto;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    position: relative;
+}
+
+nav ul li a:hover{
+color: aqua;
+
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: #16a085;
+    left: 0;
+    bottom: 0;
+    transition: 0.2s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+nav .parent{
+    position: relative;
+}
+nav .parent .child{
+    position: absolute;
+    background:#273c75;
+    width: 250px;
+    margin-top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    
+
+}
+nav .parent .child li{
+    width: 250px;
+}
+nav .parent .child li a{
+    display: block;
+}
+nav .parent:hover .child{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0%;
+    transition: 0.5s;
+    border-top: 5px solid orange;
+}
+nav .parent .child-parent{
+    position: relative;
+}
+nav .parent .sub-child{
+    position: absolute;
+    background: #273c75;
+    left: 100%;
+    top: 0%;
+    margin-top: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+nav .parent .child-parent:hover .sub-child{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0%;
+    transition: 0.5s;
+    
+}
+nav .parent:hover .child a::before{
+    width: 0%;
+}
+
